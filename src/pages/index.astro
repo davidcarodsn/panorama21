@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BannerComponent from '../components/BannerComponent.astro';
+import { PAGES } from '../utils/pages';
+import MenuComponent from '../components/ui/MenuComponent.astro';
+import MenuMobileComponent from '../components/ui/MenuMobileComponent.astro';
+import LuxurySectionComponent from '../components/LuxurySectionComponent.astro';
+import PhotoTourSectionComponent from '../components/PhotoTourSectionComponent.astro';
+import ApartmentPlansSectionComponent from '../components/ApartmentPlansSectionComponent.astro';
+import SliderVideoComponent from '../components/SliderVideoComponent.astro';
+import DotsImageSectionComponent from '../components/DotsImageSectionComponent.astro';
+import NoticesSectionComponent from '../components/NoticesSectionComponent.astro';
+import { ContactComponent } from '../components/ui/ContactComponent';
+import PreoloaderComponent from '../components/PreoloaderComponent.astro';
+import FooterComponent from '../components/FooterComponent.astro';
+import LandingSectionsLayout from '../layouts/LandingSectionsLayout.astro';
+---
+
+<Layout tite={PAGES.HOME_PAGE}>
+  <div class="body_wrap">
+    <div class="page_wrap">
+      <BannerComponent />
+      <MenuComponent />
+      <MenuMobileComponent />
+      <LandingSectionsLayout>
+        <LuxurySectionComponent />
+        <PhotoTourSectionComponent />
+        <ApartmentPlansSectionComponent />
+        <SliderVideoComponent />
+        <!-- <DotsImageSectionComponent /> -->
+        <NoticesSectionComponent />
+        <ContactComponent />
+      </LandingSectionsLayout>
+      <FooterComponent />
+    </div>
+  </div>
+  <PreoloaderComponent/>
+
+  <script is:inline type="text/javascript" src="/assets/js/vendor/jquery-2.2.4.min.js"></script>
+  <script is:inline type="text/javascript" src="/assets/js/vendor/jquery-migrate.min.js"></script>
+  <script is:inline type="text/javascript"
+    src="/assets/js/vendor/revslider/public/assets/js/jquery.themepunch.tools.min.js"></script>
+  <script is:inline type="text/javascript"
+    src="/assets/js/vendor/revslider/public/assets/js/jquery.themepunch.revolution.min.js"></script>
+  <script is:inline type="text/javascript"
+    src="/assets/js/vendor/revslider/public/assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script is:inline type="text/javascript"
+    src="/assets/js/vendor/revslider/public/assets/js/extensions/revolution.extension.actions.min.js"></script>
+  <script is:inline type="text/javascript"
+    src="/assets/js/vendor/revslider/public/assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script is:inline type="text/javascript" src="/assets/js/vendor/_packed.js"></script>
+  <script is:inline type="text/javascript" src="/assets/js/vendor/hotspot/js/jquery.tooltipster.min.js"></script>
+  <script is:inline type="text/javascript" src="/assets/js/vendor/hotspot/js/script.min.js"></script>
+  <script is:inline type="text/javascript" src="/assets/js/vendor/mediaelement/mediaelement-and-player.min.js"></script>
+
+  <script is:inline type="text/javascript" src="/assets/js/custom/_utils.js"></script>
+  <script is:inline type="text/javascript" src="/assets/js/custom/_main.js"></script>
+  <script is:inline type="text/javascript" src="/assets/js/custom/_date.js"></script>
+  <script is:inline type="text/javascript" src="/assets/js/custom/shortcodes.js"></script>
+  <script is:inline type="text/javascript" src="/assets/js/custom/_init.js"></script>
+  <script is:inline type="text/javascript" src="/assets/js/custom/_form_contact.js"></script>
+
+  <a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a>
+
+
+</Layout>
